@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block content %}
+<center>
+  <br>
+  <br>
+    <h3>Здравствуйте,{{ current_user.name }}!</h3><br>
+    <h3>Не желаете сыграть?</h3><br>
+<div class="card" style="width: 350pt; height:450pt;display: inline-block;">
+  <img src="./static/style/puzzle.png" style="width: 330pt; height:300pt;" class="card-img-top" alt="...">
+<center>
+  <div class="card-body">
+    <h5 class="card-title">Игра с системой</h5>
+    <p class="card-text">Угадайте слово, загаданное системой по теме, которую выберете сами!)</p>
+    <a href="/themes" class="btn btn-dark">Играть!</a>
+  </div>
+</center>
+</div>
+    <div class="card" style="width: 350pt; height:450pt;display: inline-block;">
+  <img src="./static/style/bot.png" style="width: 320pt; height:300pt;" class="card-img-top" alt="...">
+<center>
+  <div class="card-body">
+    <h5 class="card-title">Игра с ботом</h5>
+    <p class="card-text">Посоревнуйтесь с ботом в быстроте отгадывания слова из выбранной темы)</p>
+    <a href="/bot_difficulty" class="btn btn-dark">Играть!</a>
+  </div>
+  </center>
+</div>
+    <div class="card" style="width: 350pt; height:450pt;display: inline-block;">
+      <center>
+  <img src="https://st3.depositphotos.com/29544098/32545/v/600/depositphotos_325452098-stock-illustration-businessman-black-icon-with-question.jpg" style="width: 320pt; height:300pt;" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Игра с рандомным человеком</h5>
+    <p class="card-text">Найдите человека и играйте с ним в виселицу онлайн)</p>
+    <a href="/search" class="btn btn-dark">Играть!</a>
+  </div>
+  </center>
+</div>
+    <div class="card" style="width: 350pt; height:450pt;display: inline-block;">
+  <img src="https://img.joomcdn.net/238be9caf211ec4ca50685376e419dc9de4b2f8e_original.jpeg" style="width: 340pt; height:300pt;" class="card-img-top" alt="...">
+<center>
+  <div class="card-body">
+    <h5 class="card-title">Игра с другом</h5>
+    <p class="card-text">Выберите друга и играйте с ним!</p>
+    <a href="/choosing_partner" class="btn btn-dark">Играть!</a>
+  </div>
+  </center>
+</div>
+</center>
+{% endblock %}

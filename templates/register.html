@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="container">
+<form action="" method="post" class="forma">
+    {{ form.hidden_tag() }}
+    <label>
+        {{ form.name(class="input") }}
+        {% for error in form.name.errors %}
+            <p class="alert alert-danger" role="alert">
+                {{ error }}
+            </p>
+        {% endfor %}
+        <div class="label-text">{{ form.name.label }}</div>
+    </label>
+    <label>
+
+        {{ form.nickname(class="input") }}
+        {% for error in form.nickname.errors %}
+            <p class="alert alert-danger" role="alert">
+                {{ error }}
+            </p>
+        {% endfor %}
+        <div class="label-text">{{ form.nickname.label }}</div>
+    </label>
+    <label>
+
+        {{ form.email(class="input", type="email") }}
+        {% for error in form.email.errors %}
+            <p class="alert alert-danger" role="alert">
+                {{ error }}
+            </p>
+        {% endfor %}
+        <div class="label-text">{{ form.email.label }}</div>
+    </label>
+    <label>
+
+        {{ form.hashed_password(class="input", type="password") }}
+        {% for error in form.hashed_password.errors %}
+            <p class="alert alert-danger" role="alert">
+                {{ error }}
+            </p>
+        {% endfor %}
+        <div class="label-text">{{ form.hashed_password.label }}</div>
+    </label>
+    <label>
+
+        {{ form.hashed_password_again(class="input", type="password") }}
+        {% for error in form.hashed_password_again.errors %}
+            <p class="alert alert-danger" role="alert">
+                {{ error }}
+            </p>
+        {% endfor %}
+        <div class="label-text">{{ form.hashed_password_again.label }}</div>
+    </label>
+    <p>{{ form.submit( class="button", type="submit")}}</p>
+    <div class="message">{{ message }}</div>
+    </label>
+</form>
+    </div>
+{% endblock %}

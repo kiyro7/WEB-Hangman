@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+<center>
+    {% if result == 'both' %}
+      <h3>Победила дружба)</h3>
+    {% elif result == 'none' %}
+      <h3>Никто не победил(</h3>
+    {% endif %}
+    <img src="/static/style/tie.gif">
+</center>
+{% endblock %}

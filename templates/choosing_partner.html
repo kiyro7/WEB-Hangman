@@ -1,0 +1,20 @@
+{% extends "base_for_game.html" %}
+
+{% block content %}
+     <div class="container">
+<form action="" method="post" class="forma">
+    {{ form.hidden_tag() }}
+    <label>
+        {{ form.check(class="input") }}
+        {% for error in form.check.errors %}
+            <p class="alert alert-danger" role="alert">
+                {{ error }}
+            </p>
+        {% endfor %}
+        <div class="label-text">{{ form.check.label }}</div>
+    </label>
+    <p >{{ form.submit(type="submit", class="button")}}</p>
+    <div class="message">{{ message }}</div>
+</form>
+     </div>
+{% endblock %}

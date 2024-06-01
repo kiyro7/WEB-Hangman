@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block content %}
+     <div class="container">
+         <center>
+         <video width="500" height="500" autoplay>
+             {% if lvl == 0 %}
+                <source src="/static/style/man0.mp4" type="video/mp4">
+             {% elif lvl == 1%}
+                <source src="/static/style/man1.mp4" type="video/mp4">
+             {% elif lvl == 2%}
+                <source src="/static/style/man2.mp4" type="video/mp4">
+             {% elif lvl == 3%}
+                <source src="/static/style/man3.mp4" type="video/mp4">
+             {% elif lvl == 4%}
+                <source src="/static/style/man4.mp4" type="video/mp4">
+             {% elif lvl == 5 %}
+                <source src="/static/style/man5.mp4" type="video/mp4">
+             {% else %}
+                <source src="/static/style/man6.mp4" type="video/mp4">
+                {% endif %}
+          </video>
+         </center>
+         <form action="" method="post" class="formagame">
+             <br>
+             <h3>{{word}}</h3>
+         <div>
+         {% for item in abc1%}
+         <button type="submit" class="buttonw" formaction=/word_2/{{item}}/{{game_id}}>{{item}}</button>
+         {% endfor %}
+         </div>
+             <div>
+         {% for item in abc2%}
+         <button type="submit" class="buttonw" formaction=/word_2/{{item}}/{{game_id}}>{{item}}</button>
+         {% endfor %}
+             </div>
+                 <div>
+         {% for item in abc3%}
+         <button type="submit" class="buttonw" formaction=/word_2/{{item}}/{{game_id}}>{{item}}</button>
+         {% endfor %}
+                 </div>
+         </form>
+     </div>
+{% endblock %}

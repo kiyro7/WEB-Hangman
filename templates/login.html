@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block content %}
+     <div class="container">
+<form action="" method="post" class="forma">
+    {{ form.hidden_tag() }}
+    <label>
+        {{ form.nickname_email(class="input") }}
+        {% for error in form.nickname_email.errors %}
+            <p class="alert alert-danger" role="alert">
+                {{ error }}
+            </p>
+        {% endfor %}
+        <div class="label-text">{{ form.nickname_email.label }}</div>
+    </label>
+    <label>
+        {{ form.password(class="input", type="password") }}
+        {% for error in form.password.errors %}
+    <div class="alert alert-danger" role="alert">
+        {{ error }}
+    </div>
+    {% endfor %}
+        <div class="label-text">{{ form.password.label }}</div>
+    </label>
+    <p style="color: #9B9B9B;">{{ form.remember_me() }} {{ form.remember_me.label }}</p>
+    <p >{{ form.submit(type="submit", class="button")}}</p>
+    <div class="message">{{ message }}</div>
+</form>
+     </div>
+{% endblock %}

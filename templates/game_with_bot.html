@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+
+{% block content %}
+<br>
+     <div class="container" style="display: inline-block;">
+         <center>
+             <div class="bot">
+                 <h3>Ваша виселица:</h3>
+         <video width="500" height="500" autoplay>
+             {% if lvl1 == 0 %}
+                <source src="/static/style/man0.mp4" type="video/mp4">
+             {% elif lvl1 == 1%}
+                <source src="/static/style/man1.mp4" type="video/mp4">
+             {% elif lvl1 == 2%}
+                <source src="/static/style/man2.mp4" type="video/mp4">
+             {% elif lvl1 == 3%}
+                <source src="/static/style/man3.mp4" type="video/mp4">
+             {% elif lvl1 == 4%}
+                <source src="/static/style/man4.mp4" type="video/mp4">
+             {% elif lvl1 == 5 %}
+                <source src="/static/style/man5.mp4" type="video/mp4">
+             {% else %}
+                <source src="/static/style/man6.mp4" type="video/mp4">
+                {% endif %}
+          </video>
+             </div>
+             <div class="bot">
+                 <h3>Виселица бота:</h3>
+             <video width="500" height="500" autoplay>
+             {% if lvl2 == 0 %}
+                <source src="/static/style/man0.mp4" type="video/mp4">
+             {% elif lvl2 == 1%}
+                <source src="/static/style/man1.mp4" type="video/mp4">
+             {% elif lvl2 == 2%}
+                <source src="/static/style/man2.mp4" type="video/mp4">
+             {% elif lvl2 == 3%}
+                <source src="/static/style/man3.mp4" type="video/mp4">
+             {% elif lvl2 == 4%}
+                <source src="/static/style/man4.mp4" type="video/mp4">
+             {% elif lvl2 == 5 %}
+                <source src="/static/style/man5.mp4" type="video/mp4">
+             {% else %}
+                <source src="/static/style/man6.mp4" type="video/mp4">
+                {% endif %}
+          </video>
+         </div>
+         </center>
+         <br>
+         <form action="" method="post" class="formagame">
+             <br>
+             <h3>{{word}}</h3>
+         <div>
+         {% for item in abc1%}
+         <button type="submit" class="buttonw" formaction=/word_3/{{item}}/{{game_id}}>{{item}}</button>
+         {% endfor %}
+         </div>
+             <div>
+         {% for item in abc2%}
+         <button type="submit" class="buttonw" formaction=/word_3/{{item}}/{{game_id}}>{{item}}</button>
+         {% endfor %}
+             </div>
+                 <div>
+         {% for item in abc3%}
+         <button type="submit" class="buttonw" formaction=/word_3/{{item}}/{{game_id}}>{{item}}</button>
+         {% endfor %}
+                 </div>
+         </form>
+     </div>
+{% endblock %}

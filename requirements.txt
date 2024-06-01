@@ -1,0 +1,12 @@
+SQLAlchemy~=1.4.31
+Flask~=2.0.2
+WTForms~=2.3.3
+requests~=2.27.1
+bs4~=0.0.1
+beautifulsoup4~=4.11.0
+SQLAlchemy-serializer~=1.4.1
+Flask-Login~=0.5.0
+WTForms~=2.3.3
+Flask-WTF~=1.0.0
+Flask-RESTful~=0.3.9
+Werkzeug~=2.0.3

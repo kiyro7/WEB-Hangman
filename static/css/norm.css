@@ -1,0 +1,19 @@
+div{
+color: red;
+padding: 50px;
+}
+p{
+padding: 50px;
+}
+.r{
+background: #FF0000;
+color: #FFFFFF;
+}
+.y{
+background: #FFCC00;
+color: #000000;
+}
+.g{
+background: #CCCCCC;
+color: #FFFFFF;
+}

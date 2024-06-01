@@ -1,0 +1,22 @@
+{% extends "base_for_game.html" %}
+
+{% block content %}
+     <div class="container">
+         <form action="" method="post" class="formagame">
+    {{ form.hidden_tag() }}
+              <p>
+            {{ form.bot_difficulty.label }}
+            {{ form.bot_difficulty() }}
+        </p>
+
+        {% if form.bot_difficulty.errors %}
+            <ul class="errors">
+                {% for error in form.bot_difficulty.errors %}
+                    <li>{{ error }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+       <p >{{ form.submit(type="submit", class="button")}}</p>
+         </form>
+     </div>
+{% endblock %}

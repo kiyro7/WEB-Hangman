@@ -1,0 +1,28 @@
+{% extends "base_for_game.html" %}
+
+{% block content %}
+     <div class="container">
+         <form action="" method="post" class="formagame">
+             <br>
+             <h3>{{word}}</h3>
+         <div>
+         {% for item in abc1%}
+         <button type="submit" class="buttonw" formaction=/input_letter/{{item}}/{{game_id}}>{{item}}</button>
+         {% endfor %}
+         </div>
+             <div>
+         {% for item in abc2%}
+         <button type="submit" class="buttonw" formaction=/input_letter/{{item}}/{{game_id}}>{{item}}</button>
+         {% endfor %}
+             </div>
+                 <div>
+         {% for item in abc3%}
+         <button type="submit" class="buttonw" formaction=/input_letter/{{item}}/{{game_id}}>{{item}}</button>
+         {% endfor %}
+                  <button type="submit" class="buttonw" formaction=/input_letter/Backspace/{{game_id}}>Backspace</button>
+                 </div>
+         <p >{{ form.submit(type="submit", class="button")}}</p>
+         <div class="message">{{ message }}</div>
+         </form>
+     </div>
+{% endblock %}

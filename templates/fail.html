@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+<center>
+    <h3>К сожалению вы проиграли((</h3><br>
+    {% if word != '' %}
+        <h3>Ваше слово было: {{word}}</h3>
+    {% endif %}
+    <img src="/static/style/fail.gif">
+</center>
+{% endblock %}
